@@ -1,0 +1,8 @@
+package com.example.lyricsfinder.common
+
+sealed class Response<T>(val data: T? = null, val message: String? = null) {
+    class Loading<T>(data: T? = null) : Response<T>(data)
+    class Success<T>(data: T? = null) : Response<T>(data)
+    class Error<T>(message: String? = null, data: T? = null) : Response<T>(data, message)
+}
+

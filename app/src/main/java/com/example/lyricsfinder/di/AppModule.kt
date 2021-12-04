@@ -2,6 +2,8 @@ package com.example.lyricsfinder.di
 
 import com.example.lyricsfinder.common.Constants
 import com.example.lyricsfinder.data.remote.GeniusSongApi
+import com.example.lyricsfinder.data.repository.SongRepositoryImpl
+import com.example.lyricsfinder.domain.repository.SongRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,4 +23,8 @@ object AppModule {
         .addConverterFactory(MoshiConverterFactory.create())
         .build()
         .create()
+
+    @Provides
+    @Singleton
+    fun provideSongRepository(api: GeniusSongApi): SongRepository = SongRepositoryImpl(api)
 }
