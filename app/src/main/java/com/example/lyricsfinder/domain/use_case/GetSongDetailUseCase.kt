@@ -15,7 +15,7 @@ class GetSongDetailUseCase @Inject constructor(
     operator fun invoke(id: String): Flow<Response<SongDetail>> = flow {
         try {
             emit(Response.Loading())
-            repository.getSongDetail(id).apply { emit(Response.Success(this.toSongDetail())) }
+            repository.getSongDetail(id).apply { emit(Response.Success(toSongDetail())) }
         } catch (e: Exception) {
             emit(Response.Error(e.localizedMessage ?: "An unexpected error occurred"))
         }
