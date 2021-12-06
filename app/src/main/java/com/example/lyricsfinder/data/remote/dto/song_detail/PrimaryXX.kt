@@ -5,9 +5,9 @@ import com.squareup.moshi.Json
 
 data class PrimaryXX(
     @Json(name = "applicable")
-    val applicable: Boolean = false,
+    val applicable: Boolean?,
     @Json(name = "base")
-    val base: Double = 0.0,
+    val base: Double?,
     @Json(name = "multiplier")
-    val multiplier: Int = 0
+    val multiplier: Int?
 )

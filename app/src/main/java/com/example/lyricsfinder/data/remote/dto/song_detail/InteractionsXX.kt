@@ -5,9 +5,9 @@ import com.squareup.moshi.Json
 
 data class InteractionsXX(
     @Json(name = "cosign")
-    val cosign: Boolean = false,
+    val cosign: Boolean?,
     @Json(name = "pyong")
-    val pyong: Boolean = false,
+    val pyong: Boolean?,
     @Json(name = "vote")
-    val vote: Any = Any()
+    val vote: Any?
 )

@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 
 data class Dom(
     @Json(name = "children")
-    val children: List<Any> = listOf(),
+    val children: List<Any>?,
     @Json(name = "tag")
-    val tag: String = ""
+    val tag: String?
 )

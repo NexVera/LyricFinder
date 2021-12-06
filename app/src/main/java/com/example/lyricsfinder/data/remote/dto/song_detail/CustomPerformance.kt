@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 
 data class CustomPerformance(
     @Json(name = "artists")
-    val artists: List<ArtistX> = listOf(),
+    val artists: List<ArtistX>?,
     @Json(name = "label")
-    val label: String = ""
+    val label: String?
 )

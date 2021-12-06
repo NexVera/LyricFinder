@@ -5,5 +5,5 @@ import com.squareup.moshi.Json
 
 data class Response(
     @Json(name = "hits")
-    val hits: List<Hit> = listOf()
+    val hits: List<Hit>?
 )

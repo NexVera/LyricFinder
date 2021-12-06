@@ -5,17 +5,17 @@ import com.squareup.moshi.Json
 
 data class Album(
     @Json(name = "api_path")
-    val apiPath: String = "",
+    val apiPath: String?,
     @Json(name = "artist")
-    val artist: Artist = Artist(),
+    val artist: Artist?,
     @Json(name = "cover_art_url")
-    val coverArtUrl: String = "",
+    val coverArtUrl: String?,
     @Json(name = "full_title")
-    val fullTitle: String = "",
+    val fullTitle: String?,
     @Json(name = "id")
-    val id: Int = 0,
+    val id: Int?,
     @Json(name = "name")
-    val name: String = "",
+    val name: String?,
     @Json(name = "url")
-    val url: String = ""
+    val url: String?
 )

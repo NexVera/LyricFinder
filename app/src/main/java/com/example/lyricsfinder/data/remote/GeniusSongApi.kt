@@ -7,8 +7,8 @@ import retrofit2.http.*
 
 interface GeniusSongApi {
     @Headers(
-        "x-rapidapi-host: ${Constants.xRapidapiHost}",
-        "x-rapidapi-key: ${Constants.xRapidapiKey}"
+        "x-rapidapi-host: ${Constants.X_RAPID_API_HOST}",
+        "x-rapidapi-key: ${Constants.X_RAPID_API_KEY}"
     )
     @GET("search")
     suspend fun getSongsByKeyword(
@@ -16,8 +16,8 @@ interface GeniusSongApi {
     ): SongListDto
 
     @Headers(
-        "x-rapidapi-host: ${Constants.xRapidapiHost}",
-        "x-rapidapi-key: ${Constants.xRapidapiKey}"
+        "x-rapidapi-host: ${Constants.X_RAPID_API_HOST}",
+        "x-rapidapi-key: ${Constants.X_RAPID_API_KEY}"
     )
     @GET("songs/{id}")
     suspend fun getSongById(

@@ -5,11 +5,11 @@ import com.squareup.moshi.Json
 
 data class Stats(
     @Json(name = "concurrents")
-    val concurrents: Int = 0,
+    val concurrents: Int?,
     @Json(name = "hot")
-    val hot: Boolean = false,
+    val hot: Boolean?,
     @Json(name = "pageviews")
-    val pageviews: Int = 0,
+    val pageviews: Int?,
     @Json(name = "unreviewed_annotations")
-    val unreviewedAnnotations: Int = 0
+    val unreviewedAnnotations: Int?
 )

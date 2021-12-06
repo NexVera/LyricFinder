@@ -5,5 +5,5 @@ import com.squareup.moshi.Json
 
 data class Description(
     @Json(name = "dom")
-    val dom: Dom = Dom()
+    val dom: Dom?
 )
