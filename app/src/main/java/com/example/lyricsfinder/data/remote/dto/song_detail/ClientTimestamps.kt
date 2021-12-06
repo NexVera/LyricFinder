@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 
 data class ClientTimestamps(
     @Json(name = "lyrics_updated_at")
-    val lyricsUpdatedAt: Int,
+    val lyricsUpdatedAt: Int = 0,
     @Json(name = "updated_by_human_at")
-    val updatedByHumanAt: Int
+    val updatedByHumanAt: Int = 0
 )

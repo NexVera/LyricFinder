@@ -5,5 +5,5 @@ import com.squareup.moshi.Json
 
 data class EditMetadata(
     @Json(name = "primary")
-    val primary: Primary
+    val primary: Primary = Primary()
 )

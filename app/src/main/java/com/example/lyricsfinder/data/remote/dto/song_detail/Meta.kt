@@ -5,5 +5,5 @@ import com.squareup.moshi.Json
 
 data class Meta(
     @Json(name = "status")
-    val status: Int
+    val status: Int = 0
 )

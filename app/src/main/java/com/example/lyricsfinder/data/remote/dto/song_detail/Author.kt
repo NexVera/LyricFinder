@@ -5,9 +5,9 @@ import com.squareup.moshi.Json
 
 data class Author(
     @Json(name = "attribution")
-    val attribution: Double,
+    val attribution: Double = 0.0,
     @Json(name = "pinned_role")
-    val pinnedRole: Any?,
+    val pinnedRole: Any = Any(),
     @Json(name = "user")
-    val user: User
+    val user: User = User()
 )

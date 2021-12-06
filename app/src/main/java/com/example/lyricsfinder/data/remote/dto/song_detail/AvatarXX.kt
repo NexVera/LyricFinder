@@ -5,11 +5,11 @@ import com.squareup.moshi.Json
 
 data class AvatarXX(
     @Json(name = "medium")
-    val medium: MediumXX,
+    val medium: MediumXX = MediumXX(),
     @Json(name = "small")
-    val small: SmallXX,
+    val small: SmallXX = SmallXX(),
     @Json(name = "thumb")
-    val thumb: ThumbXX,
+    val thumb: ThumbXX = ThumbXX(),
     @Json(name = "tiny")
-    val tiny: TinyXX
+    val tiny: TinyXX = TinyXX()
 )

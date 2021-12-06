@@ -6,9 +6,9 @@ import com.squareup.moshi.Json
 
 data class SongListDto(
     @Json(name = "meta")
-    val meta: Meta,
+    val meta: Meta = Meta(),
     @Json(name = "response")
-    val response: Response
+    val response: Response = Response()
 )
 
 fun SongListDto.toSongList(): List<Song> = response.hits.map {
@@ -21,4 +21,3 @@ fun SongListDto.toSongList(): List<Song> = response.hits.map {
         )
     }
 }
-

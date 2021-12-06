@@ -5,5 +5,5 @@ import com.squareup.moshi.Json
 
 data class Body(
     @Json(name = "dom")
-    val dom: DomX
+    val dom: DomX = DomX()
 )

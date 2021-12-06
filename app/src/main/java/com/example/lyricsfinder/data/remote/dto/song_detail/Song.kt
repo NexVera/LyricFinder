@@ -5,83 +5,83 @@ import com.squareup.moshi.Json
 
 data class Song(
     @Json(name = "album")
-    val album: Album,
+    val album: Album = Album(),
     @Json(name = "annotation_count")
-    val annotationCount: Int,
+    val annotationCount: Int = 0,
     @Json(name = "api_path")
-    val apiPath: String,
+    val apiPath: String = "",
     @Json(name = "apple_music_id")
-    val appleMusicId: String,
+    val appleMusicId: String = "",
     @Json(name = "apple_music_player_url")
-    val appleMusicPlayerUrl: String,
+    val appleMusicPlayerUrl: String = "",
     @Json(name = "artist_names")
-    val artistNames: String,
+    val artistNames: String = "",
     @Json(name = "current_user_metadata")
-    val currentUserMetadata: CurrentUserMetadata,
+    val currentUserMetadata: CurrentUserMetadata = CurrentUserMetadata(),
     @Json(name = "custom_performances")
-    val customPerformances: List<CustomPerformance>,
+    val customPerformances: List<CustomPerformance> = listOf(),
     @Json(name = "description")
-    val description: Description,
+    val description: Description = Description(),
     @Json(name = "description_annotation")
-    val descriptionAnnotation: DescriptionAnnotation,
+    val descriptionAnnotation: DescriptionAnnotation = DescriptionAnnotation(),
     @Json(name = "embed_content")
-    val embedContent: String,
+    val embedContent: String = "",
     @Json(name = "featured_artists")
-    val featuredArtists: List<Any>,
+    val featuredArtists: List<Any> = listOf(),
     @Json(name = "featured_video")
-    val featuredVideo: Boolean,
+    val featuredVideo: Boolean = false,
     @Json(name = "full_title")
-    val fullTitle: String,
+    val fullTitle: String = "",
     @Json(name = "header_image_thumbnail_url")
-    val headerImageThumbnailUrl: String,
+    val headerImageThumbnailUrl: String = "",
     @Json(name = "header_image_url")
-    val headerImageUrl: String,
+    val headerImageUrl: String = "",
     @Json(name = "id")
-    val id: Int,
+    val id: Int = 0,
     @Json(name = "lyrics_marked_complete_by")
-    val lyricsMarkedCompleteBy: Any?,
+    val lyricsMarkedCompleteBy: Any = Any(),
     @Json(name = "lyrics_owner_id")
-    val lyricsOwnerId: Int,
+    val lyricsOwnerId: Int = 0,
     @Json(name = "lyrics_placeholder_reason")
-    val lyricsPlaceholderReason: Any?,
+    val lyricsPlaceholderReason: Any = Any(),
     @Json(name = "lyrics_state")
-    val lyricsState: String,
+    val lyricsState: String = "",
     @Json(name = "media")
-    val media: List<Media>,
+    val media: List<Media> = listOf(),
     @Json(name = "path")
-    val path: String,
+    val path: String = "",
     @Json(name = "primary_artist")
-    val primaryArtist: PrimaryArtist,
+    val primaryArtist: PrimaryArtist = PrimaryArtist(),
     @Json(name = "producer_artists")
-    val producerArtists: List<ProducerArtist>,
+    val producerArtists: List<ProducerArtist> = listOf(),
     @Json(name = "pyongs_count")
-    val pyongsCount: Int,
+    val pyongsCount: Int = 0,
     @Json(name = "recording_location")
-    val recordingLocation: String,
+    val recordingLocation: String = "",
     @Json(name = "release_date")
-    val releaseDate: String,
+    val releaseDate: String = "",
     @Json(name = "release_date_for_display")
-    val releaseDateForDisplay: String,
+    val releaseDateForDisplay: String = "",
     @Json(name = "song_art_image_thumbnail_url")
-    val songArtImageThumbnailUrl: String,
+    val songArtImageThumbnailUrl: String = "",
     @Json(name = "song_art_image_url")
-    val songArtImageUrl: String,
+    val songArtImageUrl: String = "",
     @Json(name = "song_relationships")
-    val songRelationships: List<SongRelationship>,
+    val songRelationships: List<SongRelationship> = listOf(),
     @Json(name = "stats")
-    val stats: StatsX,
+    val stats: StatsX = StatsX(),
     @Json(name = "title")
-    val title: String,
+    val title: String = "",
     @Json(name = "title_with_featured")
-    val titleWithFeatured: String,
+    val titleWithFeatured: String = "",
     @Json(name = "url")
-    val url: String,
+    val url: String = "",
     @Json(name = "verified_annotations_by")
-    val verifiedAnnotationsBy: List<Any>,
+    val verifiedAnnotationsBy: List<Any> = listOf(),
     @Json(name = "verified_contributors")
-    val verifiedContributors: List<VerifiedContributor>,
+    val verifiedContributors: List<VerifiedContributor> = listOf(),
     @Json(name = "verified_lyrics_by")
-    val verifiedLyricsBy: List<VerifiedLyricsBy>,
+    val verifiedLyricsBy: List<VerifiedLyricsBy> = listOf(),
     @Json(name = "writer_artists")
-    val writerArtists: List<WriterArtist>
+    val writerArtists: List<WriterArtist> = listOf()
 )

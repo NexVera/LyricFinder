@@ -5,41 +5,41 @@ import com.squareup.moshi.Json
 
 data class Annotation(
     @Json(name = "api_path")
-    val apiPath: String,
+    val apiPath: String = "",
     @Json(name = "authors")
-    val authors: List<Author>,
+    val authors: List<Author> = listOf(),
     @Json(name = "body")
-    val body: Body,
+    val body: Body = Body(),
     @Json(name = "comment_count")
-    val commentCount: Int,
+    val commentCount: Int = 0,
     @Json(name = "community")
-    val community: Boolean,
+    val community: Boolean = false,
     @Json(name = "cosigned_by")
-    val cosignedBy: List<Any>,
+    val cosignedBy: List<Any> = listOf(),
     @Json(name = "current_user_metadata")
-    val currentUserMetadata: CurrentUserMetadataXX,
+    val currentUserMetadata: CurrentUserMetadataXX = CurrentUserMetadataXX(),
     @Json(name = "custom_preview")
-    val customPreview: Any?,
+    val customPreview: Any = Any(),
     @Json(name = "has_voters")
-    val hasVoters: Boolean,
+    val hasVoters: Boolean = false,
     @Json(name = "id")
-    val id: Int,
+    val id: Int = 0,
     @Json(name = "pinned")
-    val pinned: Boolean,
+    val pinned: Boolean = false,
     @Json(name = "rejection_comment")
-    val rejectionComment: Any?,
+    val rejectionComment: Any = Any(),
     @Json(name = "share_url")
-    val shareUrl: String,
+    val shareUrl: String = "",
     @Json(name = "source")
-    val source: Any?,
+    val source: Any = Any(),
     @Json(name = "state")
-    val state: String,
+    val state: String = "",
     @Json(name = "url")
-    val url: String,
+    val url: String = "",
     @Json(name = "verified")
-    val verified: Boolean,
+    val verified: Boolean = false,
     @Json(name = "verified_by")
-    val verifiedBy: Any?,
+    val verifiedBy: Any = Any(),
     @Json(name = "votes_total")
-    val votesTotal: Int
+    val votesTotal: Int = 0
 )

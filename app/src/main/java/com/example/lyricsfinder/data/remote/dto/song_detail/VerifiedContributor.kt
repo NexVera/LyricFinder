@@ -5,9 +5,9 @@ import com.squareup.moshi.Json
 
 data class VerifiedContributor(
     @Json(name = "artist")
-    val artist: ArtistXX,
+    val artist: ArtistXX = ArtistXX(),
     @Json(name = "contributions")
-    val contributions: List<String>,
+    val contributions: List<String> = listOf(),
     @Json(name = "user")
-    val user: UserX
+    val user: UserX = UserX()
 )

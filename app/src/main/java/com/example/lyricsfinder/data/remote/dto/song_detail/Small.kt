@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 
 data class Small(
     @Json(name = "bounding_box")
-    val boundingBox: BoundingBoxX,
+    val boundingBox: BoundingBoxX = BoundingBoxX(),
     @Json(name = "url")
-    val url: String
+    val url: String = ""
 )
