@@ -5,5 +5,5 @@ import com.squareup.moshi.Json
 
 data class Delete(
     @Json(name = "primary")
-    val primary: PrimaryXX = PrimaryXX()
+    val primary: PrimaryXX?
 )

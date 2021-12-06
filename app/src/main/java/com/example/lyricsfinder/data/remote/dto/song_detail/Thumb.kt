@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 
 data class Thumb(
     @Json(name = "bounding_box")
-    val boundingBox: BoundingBoxXX = BoundingBoxXX(),
+    val boundingBox: BoundingBoxXX?,
     @Json(name = "url")
-    val url: String = ""
+    val url: String?
 )

@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 
 data class Interactions(
     @Json(name = "following")
-    val following: Boolean = false,
+    val following: Boolean?,
     @Json(name = "pyong")
-    val pyong: Boolean = false
+    val pyong: Boolean?
 )

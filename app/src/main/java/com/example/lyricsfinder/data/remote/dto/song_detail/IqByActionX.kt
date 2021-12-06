@@ -5,9 +5,9 @@ import com.squareup.moshi.Json
 
 data class IqByActionX(
     @Json(name = "accept")
-    val accept: Accept = Accept(),
+    val accept: Accept?,
     @Json(name = "delete")
-    val delete: Delete = Delete(),
+    val delete: Delete?,
     @Json(name = "reject")
-    val reject: Reject = Reject()
+    val reject: Reject?
 )

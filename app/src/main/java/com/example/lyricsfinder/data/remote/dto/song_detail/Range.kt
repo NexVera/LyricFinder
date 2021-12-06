@@ -5,5 +5,5 @@ import com.squareup.moshi.Json
 
 data class Range(
     @Json(name = "content")
-    val content: String = ""
+    val content: String?
 )

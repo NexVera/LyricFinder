@@ -5,21 +5,21 @@ import com.squareup.moshi.Json
 
 data class PrimaryArtist(
     @Json(name = "api_path")
-    val apiPath: String = "",
+    val apiPath: String?,
     @Json(name = "header_image_url")
-    val headerImageUrl: String = "",
+    val headerImageUrl: String?,
     @Json(name = "id")
-    val id: Int = 0,
+    val id: Int?,
     @Json(name = "image_url")
-    val imageUrl: String = "",
+    val imageUrl: String?,
     @Json(name = "iq")
-    val iq: Int = 0,
+    val iq: Int?,
     @Json(name = "is_meme_verified")
-    val isMemeVerified: Boolean = false,
+    val isMemeVerified: Boolean?,
     @Json(name = "is_verified")
-    val isVerified: Boolean = false,
+    val isVerified: Boolean?,
     @Json(name = "name")
-    val name: String = "",
+    val name: String?,
     @Json(name = "url")
-    val url: String = ""
+    val url: String?
 )

@@ -5,5 +5,5 @@ import com.squareup.moshi.Json
 
 data class IqByAction(
     @Json(name = "edit_metadata")
-    val editMetadata: EditMetadata = EditMetadata()
+    val editMetadata: EditMetadata?
 )

@@ -5,11 +5,11 @@ import com.squareup.moshi.Json
 
 data class Hit(
     @Json(name = "highlights")
-    val highlights: List<Any> = listOf(),
+    val highlights: List<Any>?,
     @Json(name = "index")
-    val index: String = "",
+    val index: String?,
     @Json(name = "result")
-    val result: Result = Result(),
+    val result: Result?,
     @Json(name = "type")
-    val type: String = ""
+    val type: String?
 )

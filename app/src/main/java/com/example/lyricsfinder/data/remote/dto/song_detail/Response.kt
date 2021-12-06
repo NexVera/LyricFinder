@@ -5,5 +5,5 @@ import com.squareup.moshi.Json
 
 data class Response(
     @Json(name = "song")
-    val song: Song = Song()
+    val song: Song?
 )

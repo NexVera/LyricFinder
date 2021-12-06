@@ -5,83 +5,83 @@ import com.squareup.moshi.Json
 
 data class Song(
     @Json(name = "album")
-    val album: Album = Album(),
+    val album: Album?,
     @Json(name = "annotation_count")
-    val annotationCount: Int = 0,
+    val annotationCount: Int?,
     @Json(name = "api_path")
-    val apiPath: String = "",
+    val apiPath: String?,
     @Json(name = "apple_music_id")
-    val appleMusicId: String = "",
+    val appleMusicId: String?,
     @Json(name = "apple_music_player_url")
-    val appleMusicPlayerUrl: String = "",
+    val appleMusicPlayerUrl: String?,
     @Json(name = "artist_names")
-    val artistNames: String = "",
+    val artistNames: String?,
     @Json(name = "current_user_metadata")
-    val currentUserMetadata: CurrentUserMetadata = CurrentUserMetadata(),
+    val currentUserMetadata: CurrentUserMetadata?,
     @Json(name = "custom_performances")
-    val customPerformances: List<CustomPerformance> = listOf(),
+    val customPerformances: List<CustomPerformance>?,
     @Json(name = "description")
-    val description: Description = Description(),
+    val description: Description?,
     @Json(name = "description_annotation")
-    val descriptionAnnotation: DescriptionAnnotation = DescriptionAnnotation(),
+    val descriptionAnnotation: DescriptionAnnotation?,
     @Json(name = "embed_content")
-    val embedContent: String = "",
+    val embedContent: String?,
     @Json(name = "featured_artists")
-    val featuredArtists: List<Any> = listOf(),
+    val featuredArtists: List<Any>?,
     @Json(name = "featured_video")
-    val featuredVideo: Boolean = false,
+    val featuredVideo: Boolean?,
     @Json(name = "full_title")
-    val fullTitle: String = "",
+    val fullTitle: String?,
     @Json(name = "header_image_thumbnail_url")
-    val headerImageThumbnailUrl: String = "",
+    val headerImageThumbnailUrl: String?,
     @Json(name = "header_image_url")
-    val headerImageUrl: String = "",
+    val headerImageUrl: String?,
     @Json(name = "id")
-    val id: Int = 0,
+    val id: Int?,
     @Json(name = "lyrics_marked_complete_by")
-    val lyricsMarkedCompleteBy: Any = Any(),
+    val lyricsMarkedCompleteBy: Any?,
     @Json(name = "lyrics_owner_id")
-    val lyricsOwnerId: Int = 0,
+    val lyricsOwnerId: Int?,
     @Json(name = "lyrics_placeholder_reason")
-    val lyricsPlaceholderReason: Any = Any(),
+    val lyricsPlaceholderReason: Any?,
     @Json(name = "lyrics_state")
-    val lyricsState: String = "",
+    val lyricsState: String?,
     @Json(name = "media")
-    val media: List<Media> = listOf(),
+    val media: List<Media>?,
     @Json(name = "path")
-    val path: String = "",
+    val path: String?,
     @Json(name = "primary_artist")
-    val primaryArtist: PrimaryArtist = PrimaryArtist(),
+    val primaryArtist: PrimaryArtist?,
     @Json(name = "producer_artists")
-    val producerArtists: List<ProducerArtist> = listOf(),
+    val producerArtists: List<ProducerArtist>?,
     @Json(name = "pyongs_count")
-    val pyongsCount: Int = 0,
+    val pyongsCount: Int?,
     @Json(name = "recording_location")
-    val recordingLocation: String = "",
+    val recordingLocation: String?,
     @Json(name = "release_date")
-    val releaseDate: String = "",
+    val releaseDate: String?,
     @Json(name = "release_date_for_display")
-    val releaseDateForDisplay: String = "",
+    val releaseDateForDisplay: String?,
     @Json(name = "song_art_image_thumbnail_url")
-    val songArtImageThumbnailUrl: String = "",
+    val songArtImageThumbnailUrl: String?,
     @Json(name = "song_art_image_url")
-    val songArtImageUrl: String = "",
+    val songArtImageUrl: String?,
     @Json(name = "song_relationships")
-    val songRelationships: List<SongRelationship> = listOf(),
+    val songRelationships: List<SongRelationship>?,
     @Json(name = "stats")
-    val stats: StatsX = StatsX(),
+    val stats: StatsX?,
     @Json(name = "title")
-    val title: String = "",
+    val title: String?,
     @Json(name = "title_with_featured")
-    val titleWithFeatured: String = "",
+    val titleWithFeatured: String?,
     @Json(name = "url")
-    val url: String = "",
+    val url: String?,
     @Json(name = "verified_annotations_by")
-    val verifiedAnnotationsBy: List<Any> = listOf(),
+    val verifiedAnnotationsBy: List<Any>?,
     @Json(name = "verified_contributors")
-    val verifiedContributors: List<VerifiedContributor> = listOf(),
+    val verifiedContributors: List<VerifiedContributor>?,
     @Json(name = "verified_lyrics_by")
-    val verifiedLyricsBy: List<VerifiedLyricsBy> = listOf(),
+    val verifiedLyricsBy: List<VerifiedLyricsBy>?,
     @Json(name = "writer_artists")
-    val writerArtists: List<WriterArtist> = listOf()
+    val writerArtists: List<WriterArtist>?
 )
