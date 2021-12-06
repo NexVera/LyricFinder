@@ -6,9 +6,9 @@ import com.squareup.moshi.Json
 
 data class SongDetailDto(
     @Json(name = "meta")
-    val meta: Meta,
+    val meta: Meta = Meta(),
     @Json(name = "response")
-    val response: Response
+    val response: Response = Response()
 )
 
 fun SongDetailDto.toSongDetail(): SongDetail = response.song.let {

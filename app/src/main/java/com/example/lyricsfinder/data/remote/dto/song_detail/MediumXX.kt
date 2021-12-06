@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 
 data class MediumXX(
     @Json(name = "bounding_box")
-    val boundingBox: BoundingBoxXXXXXXXX,
+    val boundingBox: BoundingBoxXXXXXXXX = BoundingBoxXXXXXXXX(),
     @Json(name = "url")
-    val url: String
+    val url: String = ""
 )

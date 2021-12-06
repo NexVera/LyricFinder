@@ -5,33 +5,33 @@ import com.squareup.moshi.Json
 
 data class DescriptionAnnotation(
     @Json(name = "annotatable")
-    val annotatable: Annotatable,
+    val annotatable: Annotatable = Annotatable(),
     @Json(name = "annotations")
-    val annotations: List<Annotation>,
+    val annotations: List<Annotation> = listOf(),
     @Json(name = "annotator_id")
-    val annotatorId: Int,
+    val annotatorId: Int = 0,
     @Json(name = "annotator_login")
-    val annotatorLogin: String,
+    val annotatorLogin: String = "",
     @Json(name = "api_path")
-    val apiPath: String,
+    val apiPath: String = "",
     @Json(name = "classification")
-    val classification: String,
+    val classification: String = "",
     @Json(name = "fragment")
-    val fragment: String,
+    val fragment: String = "",
     @Json(name = "id")
-    val id: Int,
+    val id: Int = 0,
     @Json(name = "is_description")
-    val isDescription: Boolean,
+    val isDescription: Boolean = false,
     @Json(name = "path")
-    val path: String,
+    val path: String = "",
     @Json(name = "range")
-    val range: Range,
+    val range: Range = Range(),
     @Json(name = "song_id")
-    val songId: Int,
+    val songId: Int = 0,
     @Json(name = "_type")
-    val type: String,
+    val type: String = "",
     @Json(name = "url")
-    val url: String,
+    val url: String = "",
     @Json(name = "verified_annotator_ids")
-    val verifiedAnnotatorIds: List<Any>
+    val verifiedAnnotatorIds: List<Any> = listOf()
 )

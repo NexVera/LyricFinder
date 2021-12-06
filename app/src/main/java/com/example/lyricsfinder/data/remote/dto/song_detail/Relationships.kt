@@ -5,5 +5,5 @@ import com.squareup.moshi.Json
 
 data class Relationships(
     @Json(name = "pinned_role")
-    val pinnedRole: Any?
+    val pinnedRole: Any = Any()
 )

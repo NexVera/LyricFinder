@@ -5,9 +5,9 @@ import com.squareup.moshi.Json
 
 data class CurrentUserMetadataXXXX(
     @Json(name = "excluded_permissions")
-    val excludedPermissions: List<Any>,
+    val excludedPermissions: List<Any> = listOf(),
     @Json(name = "interactions")
-    val interactions: InteractionsXXXX,
+    val interactions: InteractionsXXXX = InteractionsXXXX(),
     @Json(name = "permissions")
-    val permissions: List<String>
+    val permissions: List<String> = listOf()
 )

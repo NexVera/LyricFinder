@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 
 data class BoundingBoxXXXXXXX(
     @Json(name = "height")
-    val height: Int,
+    val height: Int = 0,
     @Json(name = "width")
-    val width: Int
+    val width: Int = 0
 )

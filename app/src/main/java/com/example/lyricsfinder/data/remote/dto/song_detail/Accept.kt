@@ -5,5 +5,5 @@ import com.squareup.moshi.Json
 
 data class Accept(
     @Json(name = "primary")
-    val primary: PrimaryX
+    val primary: PrimaryX = PrimaryX()
 )
