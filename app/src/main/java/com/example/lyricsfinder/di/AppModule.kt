@@ -4,6 +4,8 @@ import com.example.lyricsfinder.common.Constants
 import com.example.lyricsfinder.data.remote.GeniusSongApi
 import com.example.lyricsfinder.data.repository.SongRepositoryImpl
 import com.example.lyricsfinder.domain.repository.SongRepository
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,9 +20,15 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     @Singleton
-    fun provideGeniusSongApi(): GeniusSongApi = Retrofit.Builder()
+    fun provideMoshi(): Moshi = Moshi.Builder()
+        .add((KotlinJsonAdapterFactory()))
+        .build()
+
+    @Provides
+    @Singleton
+    fun provideGeniusSongApi(moshi: Moshi): GeniusSongApi = Retrofit.Builder()
         .baseUrl(Constants.BASE_URL)
-        .addConverterFactory(MoshiConverterFactory.create())
+        .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
         .create()
 
