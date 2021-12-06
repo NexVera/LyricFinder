@@ -19,7 +19,7 @@ interface GeniusSongApi {
         "x-rapidapi-host: ${Constants.xRapidapiHost}",
         "x-rapidapi-key: ${Constants.xRapidapiKey}"
     )
-    @GET("search/{id}")
+    @GET("songs/{id}")
     suspend fun getSongById(
         @Path("id") id: String
     ): SongDetailDto
