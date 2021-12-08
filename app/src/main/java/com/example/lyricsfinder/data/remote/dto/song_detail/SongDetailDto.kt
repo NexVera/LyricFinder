@@ -22,6 +22,7 @@ fun SongDetailDto.toSongDetail(): SongDetail? = response?.song?.let {
         it.producerArtists?.map { producer -> producer.name ?: Constants.DEFAULT_VAL_STRING }
             ?: emptyList(),
         it.releaseDate ?: Constants.DEFAULT_VAL_STRING,
-        it.songArtImageUrl ?: Constants.DEFAULT_VAL_STRING
+        it.songArtImageUrl ?: Constants.DEFAULT_VAL_STRING,
+        it.url ?: Constants.DEFAULT_VAL_STRING
     )
 }

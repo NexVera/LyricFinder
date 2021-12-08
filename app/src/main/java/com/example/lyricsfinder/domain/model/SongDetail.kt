@@ -8,4 +8,5 @@ data class SongDetail(
     val producerArtists: List<String>,
     val releaseDate: String,
     val songArtImageUrl: String,
+    val lyricUrl: String
 )
