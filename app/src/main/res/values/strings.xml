@@ -1,3 +1,15 @@
 <resources>
+
     <string name="app_name">LyricsFinder</string>
+
+    <!-- Song Detail Description -->
+    <string name="song_title_text">Title: %s</string>
+    <string name="song_artist_text">Artist: %s</string>
+    <string name="song_producer_text">Producer: %s</string>
+    <string name="song_writer_text">Writer: %s</string>
+    <string name="song_release_date_text">Release Date: %s</string>
+
+    <!-- Button -->
+    <string name="get_lyric_button">Get Lyric</string>
+
 </resources>

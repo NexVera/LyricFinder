@@ -1,5 +1,6 @@
 package com.example.lyricsfinder.common
 
+import android.view.View
 import android.widget.ImageView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
@@ -15,5 +16,13 @@ fun bindImage(view: ImageView, url: String?) {
                 error(R.drawable.ic_broken_image)
             }
         }
+    }
+}
+
+@BindingAdapter("isVisible")
+fun bindVisibility(view: View, visible: Boolean) {
+    when (visible) {
+        true -> view.visibility = View.VISIBLE
+        false -> view.visibility = View.GONE
     }
 }
