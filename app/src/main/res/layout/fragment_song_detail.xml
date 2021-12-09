@@ -6,8 +6,6 @@
 
     <data>
 
-        <import type="java.util.List"/>
-
         <variable
             name="songDetailFragment"
             type="com.example.lyricsfinder.presentation.song_detail.SongDetailFragment" />
