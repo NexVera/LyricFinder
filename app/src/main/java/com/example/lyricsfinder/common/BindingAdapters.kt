@@ -4,6 +4,8 @@ import android.view.View
 import android.widget.ImageView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.lyricsfinder.R
 
@@ -25,4 +27,17 @@ fun bindVisibility(view: View, visible: Boolean) {
         true -> view.visibility = View.VISIBLE
         false -> view.visibility = View.GONE
     }
+}
+
+@BindingAdapter("data")
+fun bindDataRecyclerView(recyclerView: RecyclerView, data: List<Any>?) {
+    data?.let {
+        @Suppress("UNCHECKED_CAST")
+        (recyclerView.adapter as? BindableListAdapter<Any, *>)?.submitList(it)
+    }
+}
+
+@BindingAdapter("fragment")
+fun bindFragmentRecyclerView(recyclerView: RecyclerView, fragment: Fragment) {
+    (recyclerView.adapter as BindableListAdapter<*, *>).fragment = fragment
 }
