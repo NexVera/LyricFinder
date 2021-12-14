@@ -33,23 +33,20 @@ class SongDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         lifecycleScope.launchWhenStarted {
             viewModel.state.collectLatest {
-                // Set the loading animation
-                binding.isLoading = it.isLoading
+                // Bind the response
+                binding.songDetailFragment = this@SongDetailFragment
+                binding.viewModel = viewModel
 
-                // Handle success/error api response
+                // Handle error
                 if (it.error.isNotBlank())
                     Snackbar.make(view, it.error, Snackbar.LENGTH_LONG).show()
-                else {
-                    binding.song = it.data
-                    binding.songDetailFragment = this@SongDetailFragment
-                }
             }
         }
     }
 
     // Listener Method
     fun navigateToLyricUrl() {
-        binding.song?.let {
+        binding.viewModel?.state?.value?.data?.let {
             Intent(
                 Intent.ACTION_VIEW,
                 it.lyricUrl.toUri().buildUpon().scheme("https").build()

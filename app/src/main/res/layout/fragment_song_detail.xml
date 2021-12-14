@@ -11,12 +11,8 @@
             type="com.example.lyricsfinder.presentation.song_detail.SongDetailFragment" />
 
         <variable
-            name="isLoading"
-            type="Boolean" />
-
-        <variable
-            name="song"
-            type="com.example.lyricsfinder.domain.model.SongDetail" />
+            name="viewModel"
+            type="com.example.lyricsfinder.presentation.song_detail.SongDetailViewModel" />
 
     </data>
 
@@ -27,7 +23,7 @@
 
         <!--    Loading Animation    -->
         <com.google.android.material.progressindicator.CircularProgressIndicator
-            isVisible="@{isLoading}"
+            isVisible="@{viewModel.state.loading}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -35,7 +31,7 @@
 
         <!--    Loaded Content of Song Detail    -->
         <ScrollView
-            isVisible="@{!isLoading}"
+            isVisible="@{!viewModel.state.loading}"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="none">
@@ -47,12 +43,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    imageUrl="@{song.songArtImageUrl}"
                     android:layout_width="380dp"
                     android:layout_height="380dp"
                     android:layout_marginVertical="24dp"
                     android:importantForAccessibility="no"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    app:imageUrl="@{viewModel.state.data.songArtImageUrl}" />
 
                 <!--    Card Description of Song Detail    -->
                 <com.google.android.material.card.MaterialCardView
@@ -69,38 +65,38 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:text="@{@string/song_title_text(song.title)}" />
+                            android:text="@{@string/song_title_text(viewModel.state.data.title)}" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:text="@{@string/song_artist_text(song.artistNames)}" />
+                            android:text="@{@string/song_artist_text(viewModel.state.data.artistNames)}" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:text="@{@string/song_producer_text(song.producerArtists.toString().replace(`[`, ``).replace(`]`, ``))}" />
+                            android:text="@{@string/song_producer_text(viewModel.state.data.producerArtists.toString().replace(`[`, ``).replace(`]`, ``))}" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:text="@{@string/song_writer_text(song.writerArtists.toString().replace(`[`, ``).replace(`]`, ``))}" />
+                            android:text="@{@string/song_writer_text(viewModel.state.data.writerArtists.toString().replace(`[`, ``).replace(`]`, ``))}" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
-                            android:text="@{@string/song_release_date_text(song.releaseDate)}" />
+                            android:text="@{@string/song_release_date_text(viewModel.state.data.releaseDate)}" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/urlBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="end"
-                            android:onClick="@{() -> songDetailFragment.navigateToLyricUrl()}"
+                            android:onClick="@{_ -> songDetailFragment.navigateToLyricUrl()}"
                             android:text="@string/get_lyric_button"
                             app:cornerRadius="100dp" />
 
